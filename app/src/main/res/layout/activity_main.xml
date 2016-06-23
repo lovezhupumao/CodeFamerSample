@@ -34,4 +34,43 @@
         app:pet_hoverShowsPw="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+    <zpm.lib.ui.floatbutton.FloatingActionsMenu
+        android:id="@+id/right_labels"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        app:fab_addButtonColorNormal="@color/white"
+        app:fab_addButtonColorPressed="@color/white_pressed"
+        app:fab_addButtonPlusIconColor="@color/half_black"
+        app:fab_addButtonSize="mini"
+        app:fab_labelsPosition="right">
+
+        <zpm.lib.ui.floatbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/white"
+            app:fab_icon="@drawable/ic_fab_star"
+            app:fab_title="Label on the right"
+            app:fab_colorPressed="@color/white_pressed"/>
+
+        <zpm.lib.ui.floatbutton.FloatingActionButton
+
+        android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/white"
+            app:fab_size="mini"
+            app:fab_title="Another one on the right"
+            app:fab_colorPressed="@color/fbutton_color_green_sea"/>
+
+    </zpm.lib.ui.floatbutton.FloatingActionsMenu>
+    <zpm.lib.ui.roundedimageview.RoundedImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:riv_border_color="@color/colorAccent"
+        app:riv_corner_radius="5dp"
+        app:riv_oval="true"
+        android:src="@drawable/kl"/>
 </LinearLayout>
