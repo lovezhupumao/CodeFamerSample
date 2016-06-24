@@ -1,76 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-  android:orientation="vertical">
-    <zpm.lib.ui.circlebutton.CircleButton
-        android:id="@+id/button0"
-        android:layout_width="match_parent"
-        android:layout_height="64dip"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="8dip"
-        android:src="@drawable/ic_action_tick"
-        app:cb_color="#99CC00"
-        />
-    <zpm.lib.ui.floatbutton.FloatingActionButton
-        android:id="@+id/pink_icon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:fab_icon="@drawable/ic_fab_star"
-        app:fab_colorNormal="@color/pink"
-        app:fab_colorPressed="@color/pink_pressed"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="16dp"/>
-    <zpm.lib.ui.smoothcheckbox.SmoothCheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:color_checked="@color/colorAccent"
-        app:color_unchecked="@color/ksw_md_ripple_normal"/>
-    <zpm.lib.ui.passwordedittext.PasswordEditText
-        app:pet_hoverShowsPw="true"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-    <zpm.lib.ui.floatbutton.FloatingActionsMenu
-        android:id="@+id/right_labels"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp"
-        app:fab_addButtonColorNormal="@color/white"
-        app:fab_addButtonColorPressed="@color/white_pressed"
-        app:fab_addButtonPlusIconColor="@color/half_black"
-        app:fab_addButtonSize="mini"
-        app:fab_labelsPosition="right">
-
-        <zpm.lib.ui.floatbutton.FloatingActionButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:fab_colorNormal="@color/white"
-            app:fab_icon="@drawable/ic_fab_star"
-            app:fab_title="Label on the right"
-            app:fab_colorPressed="@color/white_pressed"/>
-
-        <zpm.lib.ui.floatbutton.FloatingActionButton
-
-        android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:fab_colorNormal="@color/white"
-            app:fab_size="mini"
-            app:fab_title="Another one on the right"
-            app:fab_colorPressed="@color/fbutton_color_green_sea"/>
-
-    </zpm.lib.ui.floatbutton.FloatingActionsMenu>
-    <zpm.lib.ui.roundedimageview.RoundedImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:riv_border_color="@color/colorAccent"
-        app:riv_corner_radius="5dp"
-        app:riv_oval="true"
-        android:src="@drawable/kl"/>
+    android:orientation="vertical">
+   <ListView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:id="@+id/listview"></ListView>
 </LinearLayout>
