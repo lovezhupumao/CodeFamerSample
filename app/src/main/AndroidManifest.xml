@@ -22,7 +22,9 @@
         <activity android:name=".FloatActionButtonActivity" />
         <activity android:name=".HtextViewActivity" />
         <activity android:name=".PassordEditviewActivity" />
-        <activity android:name=".RoundedImageviewActivity"></activity>
+        <activity android:name=".RoundedImageviewActivity" />
+        <activity android:name=".SmoothCheckboxActivity" />
+        <activity android:name=".SwitchbuttonActivity"></activity>
     </application>
 
 </manifest>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="zpm.codefarmer.sample.SmoothCheckboxActivity">
+    <include layout="@layout/layout_titlebar"/>
+    <zpm.lib.ui.smoothcheckbox.SmoothCheckBox
+        android:id="@+id/scb"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="5dp"
+        android:paddingTop="10dp"
+        app:color_checked="@color/colorAccent"/>
+
+    <zpm.lib.ui.smoothcheckbox.SmoothCheckBox
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="5dp"
+        app:color_checked="#447eeb"
+        app:color_unchecked="@color/colorAccent"/>
+
+    <zpm.lib.ui.smoothcheckbox.SmoothCheckBox
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="5dp"
+        android:paddingBottom="10dp"
+        app:color_checked="#149A45"
+        app:color_unchecked_stroke="@color/colorPrimary"/>
+
+    <zpm.lib.ui.smoothcheckbox.SmoothCheckBox
+        app:duration="10"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="5dp" />
+</LinearLayout>

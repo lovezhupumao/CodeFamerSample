@@ -53,6 +53,8 @@ public class MainActivity extends AppCompatActivity {
         list.add(new DemoInfo("Htextview Example",HtextViewActivity.class));
         list.add(new DemoInfo("passwordEdit Example",PassordEditviewActivity.class));
         list.add(new DemoInfo("RoundedImageView Example",RoundedImageviewActivity.class));
+        list.add(new DemoInfo("SmoothCheckBox Example",SmoothCheckboxActivity.class));
+        list.add(new DemoInfo("SwitchButton Example",SwitchbuttonActivity.class));
     }
 
     private static class DemoInfo{
