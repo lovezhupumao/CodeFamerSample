@@ -15,7 +15,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CircleButtonActivity"></activity>
+        <activity android:name=".CircleButtonActivity" />
+        <activity android:name=".CircleImageActivity"></activity>
     </application>
 
 </manifest>
