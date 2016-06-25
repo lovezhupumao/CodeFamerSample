@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+<include layout="@layout/layout_titlebar"/>
+    <zpm.lib.ui.floatbutton.FloatingActionButton
+        android:id="@+id/pink_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fab_icon="@drawable/ic_fab_star"
+        app:fab_colorNormal="@color/pink"
+        app:fab_colorPressed="@color/pink_pressed"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/pink_icon"
+        android:text="Text below button"
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginBottom="48dp"/>
+
+    <zpm.lib.ui.floatbutton.AddFloatingActionButton
+        android:id="@+id/semi_transparent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/pink_icon"
+        app:fab_plusIconColor="@color/white"
+        app:fab_colorNormal="@color/blue_semi_transparent"
+        app:fab_colorPressed="@color/blue_semi_transparent_pressed"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"/>
+
+    <zpm.lib.ui.floatbutton.FloatingActionButton
+        android:id="@+id/setter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/semi_transparent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"/>
+
+    <zpm.lib.ui.floatbutton.AddFloatingActionButton
+        android:id="@+id/normal_plus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:fab_plusIconColor="@color/half_black"
+        app:fab_colorNormal="@color/white"
+        app:fab_colorPressed="@color/white_pressed"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"/>
+
+    <zpm.lib.ui.floatbutton.FloatingActionsMenu
+        android:id="@+id/right_labels"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@id/normal_plus"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        app:fab_addButtonColorNormal="@color/white"
+        app:fab_addButtonColorPressed="@color/white_pressed"
+        app:fab_addButtonPlusIconColor="@color/half_black"
+        app:fab_addButtonSize="mini"
+        app:fab_labelStyle="@style/menu_labels_style"
+        app:fab_labelsPosition="right">
+
+        <zpm.lib.ui.floatbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/white"
+            app:fab_title="Label on the right"
+            app:fab_colorPressed="@color/white_pressed"/>
+
+        <zpm.lib.ui.floatbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/white"
+            app:fab_size="mini"
+            app:fab_title="Another one on the right"
+            app:fab_colorPressed="@color/white_pressed"/>
+
+    </zpm.lib.ui.floatbutton.FloatingActionsMenu>
+
+    <zpm.lib.ui.floatbutton.FloatingActionsMenu
+        android:id="@+id/multiple_actions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        app:fab_addButtonColorNormal="@color/white"
+        app:fab_addButtonColorPressed="@color/white_pressed"
+        app:fab_addButtonPlusIconColor="@color/half_black"
+        app:fab_labelStyle="@style/menu_labels_style"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp">
+
+        <zpm.lib.ui.floatbutton.FloatingActionButton
+            android:id="@+id/action_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/white"
+            app:fab_title="Action A"
+            app:fab_colorPressed="@color/white_pressed"/>
+
+        <zpm.lib.ui.floatbutton.FloatingActionButton
+            android:id="@+id/action_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/white"
+            app:fab_title="Action with a very long name that won\'t fit on the screen"
+            app:fab_colorPressed="@color/white_pressed"/>
+
+    </zpm.lib.ui.floatbutton.FloatingActionsMenu>
+
+    <zpm.lib.ui.floatbutton.FloatingActionsMenu
+        android:id="@+id/multiple_actions_down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        app:fab_addButtonColorNormal="@color/white"
+        app:fab_addButtonColorPressed="@color/white_pressed"
+        app:fab_addButtonSize="mini"
+        app:fab_addButtonPlusIconColor="@color/half_black"
+        app:fab_expandDirection="down"
+        app:fab_labelStyle="@style/menu_labels_style"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp">
+
+        <zpm.lib.ui.floatbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/white"
+            app:fab_colorPressed="@color/white_pressed"
+            app:fab_size="mini"/>
+
+        <zpm.lib.ui.floatbutton.FloatingActionButton
+            android:id="@+id/button_remove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/white"
+            app:fab_colorPressed="@color/white_pressed"
+            app:fab_title="Click to remove"/>
+
+        <zpm.lib.ui.floatbutton.FloatingActionButton
+            android:id="@+id/button_gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/white"
+            app:fab_colorPressed="@color/white_pressed"/>
+
+        <zpm.lib.ui.floatbutton.FloatingActionButton
+            android:id="@+id/action_enable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/white"
+            app:fab_title="Set bottom menu enabled/disabled"
+            app:fab_colorPressed="@color/white_pressed"/>
+
+    </zpm.lib.ui.floatbutton.FloatingActionsMenu>
+
+    <zpm.lib.ui.floatbutton.FloatingActionsMenu
+        android:id="@+id/multiple_actions_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/multiple_actions_down"
+        android:layout_toStartOf="@+id/multiple_actions_down"
+        android:layout_alignParentTop="true"
+        app:fab_addButtonColorNormal="@color/white"
+        app:fab_addButtonColorPressed="@color/white_pressed"
+        app:fab_addButtonSize="mini"
+        app:fab_addButtonPlusIconColor="@color/half_black"
+        app:fab_addButtonStrokeVisible="false"
+        app:fab_expandDirection="left"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp">
+
+        <zpm.lib.ui.floatbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/white"
+            app:fab_colorPressed="@color/white_pressed"/>
+
+        <zpm.lib.ui.floatbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/white"
+            app:fab_colorPressed="@color/white_pressed"
+            app:fab_size="mini"/>
+
+        <zpm.lib.ui.floatbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:fab_colorNormal="@color/white"
+            app:fab_colorPressed="@color/white_pressed"
+            app:fab_size="mini"/>
+
+    </zpm.lib.ui.floatbutton.FloatingActionsMenu>
+
+    <zpm.lib.ui.floatbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/setter_drawable"
+        android:layout_above="@id/setter"
+        android:layout_centerHorizontal="true"/>
+</LinearLayout>
