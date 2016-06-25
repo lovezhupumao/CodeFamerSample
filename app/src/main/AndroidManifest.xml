@@ -20,7 +20,8 @@
         <activity android:name=".CircularFloatingActionMenuActivity" />
         <activity android:name=".FlatButtonActivity" />
         <activity android:name=".FloatActionButtonActivity" />
-        <activity android:name=".HtextViewActivity"></activity>
+        <activity android:name=".HtextViewActivity" />
+        <activity android:name=".PassordEditviewActivity"></activity>
     </application>
 
 </manifest>

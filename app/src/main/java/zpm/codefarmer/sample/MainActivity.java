@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
         list.add(new DemoInfo("Flat Button Example",FlatButtonActivity.class));
         list.add(new DemoInfo("Float Action Button Example",FloatActionButtonActivity.class));
         list.add(new DemoInfo("Htextview Example",HtextViewActivity.class));
+        list.add(new DemoInfo("passwordEdit Example",PassordEditviewActivity.class));
     }
 
     private static class DemoInfo{
