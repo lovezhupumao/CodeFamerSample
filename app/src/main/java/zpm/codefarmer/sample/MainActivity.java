@@ -7,9 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
-import android.widget.ListAdapter;
 import android.widget.ListView;
-import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -17,12 +15,13 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import zpm.lib.ui.circlebutton.CircleButton;
 
 public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.listview)
     ListView listView;
+    @BindView(R.id.titlebar)
+    TextView titleview;
     MyAdapter adapter;
     List<DemoInfo> list=new ArrayList<DemoInfo>();
 
@@ -31,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+        titleview.setText(R.string.app_name);
         initList();
         adapter=new MyAdapter();
         listView.setAdapter(adapter);
@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent=new Intent(MainActivity.this,list.get(position).demoClass);
+                intent.putExtra("titlename",list.get(position).title);
                 startActivity(intent);
             }
         });
@@ -46,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
     private void initList() {
         list.add(new DemoInfo("CircleButton Example",CircleButtonActivity.class));
         list.add(new DemoInfo("CircleImageView Example",CircleImageActivity.class));
+        list.add(new DemoInfo("CircularFloatingActionMenu Example",CircularFloatingActionMenuActivity.class));
     }
 
     private static class DemoInfo{
@@ -77,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
            if (convertView==null)
-               convertView = View.inflate(MainActivity.this, R.layout.itemlayout, null);
+               convertView = View.inflate(MainActivity.this, R.layout.layout_item, null);
             TextView title = (TextView)convertView.findViewById(R.id.classname);
             title.setText(list.get(position).title);
             return convertView;

@@ -5,6 +5,8 @@ package zpm.lib.ui.circularfloatingactionmenu;
 
 import android.app.Activity;
 import android.content.Context;
+
+
 import android.graphics.Path;
 import android.graphics.PathMeasure;
 import android.graphics.PixelFormat;
@@ -16,6 +18,7 @@ import android.view.Display;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.OrientationEventListener;
+import android.view.Surface;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
@@ -126,7 +129,7 @@ public class FloatingActionMenu {
 
         if(systemOverlay) {
             orientationListener = new OrientationEventListener(mainActionView.getContext(), SensorManager.SENSOR_DELAY_UI) {
-                private int lastState = -1;
+                private  int lastState = -1;
 
                 public void onOrientationChanged(int orientation) {
 

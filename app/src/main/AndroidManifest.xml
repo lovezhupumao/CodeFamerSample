@@ -16,7 +16,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".CircleButtonActivity" />
-        <activity android:name=".CircleImageActivity"></activity>
+        <activity android:name=".CircleImageActivity" />
+        <activity android:name=".CircularFloatingActionMenuActivity"></activity>
     </application>
 
 </manifest>
