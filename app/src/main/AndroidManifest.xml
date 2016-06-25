@@ -19,7 +19,8 @@
         <activity android:name=".CircleImageActivity" />
         <activity android:name=".CircularFloatingActionMenuActivity" />
         <activity android:name=".FlatButtonActivity" />
-        <activity android:name=".FloatActionButtonActivity"></activity>
+        <activity android:name=".FloatActionButtonActivity" />
+        <activity android:name=".HtextViewActivity"></activity>
     </application>
 
 </manifest>
