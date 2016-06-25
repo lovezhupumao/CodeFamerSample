@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         list.add(new DemoInfo("CircleButton Example",CircleButtonActivity.class));
         list.add(new DemoInfo("CircleImageView Example",CircleImageActivity.class));
         list.add(new DemoInfo("CircularFloatingActionMenu Example",CircularFloatingActionMenuActivity.class));
+        list.add(new DemoInfo("Flat Button Example",FlatButtonActivity.class));
     }
 
     private static class DemoInfo{

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_titlebar" />
+    <zpm.lib.ui.flatbutton.FButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:buttonColor="@color/colorAccent"
+        app:cornerRadius="10dp"
+        android:text="hello world！"
+        android:layout_gravity="center"
+        app:shadowColor="@color/colorPrimary"/>
+</LinearLayout>
