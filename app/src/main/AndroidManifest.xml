@@ -25,7 +25,8 @@
         <activity android:name=".RoundedImageviewActivity" />
         <activity android:name=".SmoothCheckboxActivity" />
         <activity android:name=".SwitchbuttonActivity" />
-        <activity android:name=".NumberProgressBarActivity"></activity>
+        <activity android:name=".NumberProgressBarActivity" />
+        <activity android:name=".CircleProgressBarActivity"></activity>
     </application>
 
 </manifest>

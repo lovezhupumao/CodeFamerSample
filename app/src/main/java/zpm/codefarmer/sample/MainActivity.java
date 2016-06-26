@@ -56,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
         list.add(new DemoInfo("SmoothCheckBox Example",SmoothCheckboxActivity.class));
         list.add(new DemoInfo("SwitchButton Example",SwitchbuttonActivity.class));
         list.add(new DemoInfo("NumberProgressBar Example",NumberProgressBarActivity.class));
+        list.add(new DemoInfo("CircleProgressBar Example",CircleProgressBarActivity.class));
     }
 
     private static class DemoInfo{
@@ -64,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
 
         public DemoInfo(String title ,Class<? extends android.app.Activity> demoClass) {
             this.title = title;
+
             this.demoClass = demoClass;
         }
     }
