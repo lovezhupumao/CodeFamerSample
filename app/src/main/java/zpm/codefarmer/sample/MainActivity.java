@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
         list.add(new DemoInfo("RoundedImageView Example",RoundedImageviewActivity.class));
         list.add(new DemoInfo("SmoothCheckBox Example",SmoothCheckboxActivity.class));
         list.add(new DemoInfo("SwitchButton Example",SwitchbuttonActivity.class));
+        list.add(new DemoInfo("NumberProgressBar Example",NumberProgressBarActivity.class));
     }
 
     private static class DemoInfo{
