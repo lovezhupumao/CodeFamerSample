@@ -26,7 +26,8 @@
         <activity android:name=".SmoothCheckboxActivity" />
         <activity android:name=".SwitchbuttonActivity" />
         <activity android:name=".NumberProgressBarActivity" />
-        <activity android:name=".CircleProgressBarActivity"></activity>
+        <activity android:name=".CircleProgressBarActivity" />
+        <activity android:name=".NiceSpinnerActivity"></activity>
     </application>
 
 </manifest>

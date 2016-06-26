@@ -214,5 +214,11 @@
         <attr name="arc_bottom_text_size" format="dimension"/>
     </declare-styleable>
 
+    <declare-styleable name="NiceSpinner">
+        <attr name="arrowTint" format="color" />
+        <attr name="hideArrow" format="boolean" />
+        <attr name="backgroundSelector" format="integer"/>
+        <attr name="textTint" format="color"/>
+    </declare-styleable>
 
 </resources>
