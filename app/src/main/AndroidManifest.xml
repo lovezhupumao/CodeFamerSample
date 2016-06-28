@@ -27,7 +27,8 @@
         <activity android:name=".SwitchbuttonActivity" />
         <activity android:name=".NumberProgressBarActivity" />
         <activity android:name=".CircleProgressBarActivity" />
-        <activity android:name=".NiceSpinnerActivity"></activity>
+        <activity android:name=".NiceSpinnerActivity" />
+        <activity android:name=".DialogplusActivity"></activity>
     </application>
 
 </manifest>

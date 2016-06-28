@@ -10,13 +10,7 @@
     android:id="@+id/tv_tinted_spinner"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_gravity="center"
-    android:gravity="center"
-    android:paddingBottom="@dimen/one_and_a_half_grid_unit"
-    android:paddingTop="@dimen/one_and_a_half_grid_unit"
-    android:singleLine="true"
-    android:textSize="15sp"
-        app:hideArrow="false"
+    
 
    />
 
