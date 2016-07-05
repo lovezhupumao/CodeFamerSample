@@ -9,10 +9,7 @@ import android.os.Build;
 import android.util.Patterns;
 
 /**
- * @ClassName: StringUtils
- * @Description: 
- * @author RederXu
- * @date 2015-9-18
+ * 字符串操作工具
  */
 public class StringUtils {
     /**
