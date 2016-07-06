@@ -1,5 +1,4 @@
 package zpm.lib.utils;
-
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -11,7 +10,6 @@ import java.nio.channels.FileChannel;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
-
 /**
  * @author zpm
  * 文件操作工具
