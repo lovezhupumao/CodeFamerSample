@@ -9,5 +9,25 @@
         android:layout_height="wrap_content"
         android:text="上传图片"
         android:id="@+id/retrofit_get_uploadpicture"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/fbutton_color_asbestos"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/retrofit_phone_num"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="15123339336" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/retrofit_phone_info"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="查询"
+            android:id="@+id/retrofit_phone_require"/>
+    </LinearLayout>
 
 </LinearLayout>

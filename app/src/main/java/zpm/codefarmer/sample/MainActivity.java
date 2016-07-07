@@ -15,6 +15,7 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import zpm.codefarmer.sample.retrofit.RetrofitActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -60,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
         list.add(new DemoInfo("NiceSpinner Example",NiceSpinnerActivity.class));
                 list.add(new DemoInfo("DialogPlusExamle",DialogplusActivity.class));
         list.add(new DemoInfo("Better Spinner",BetterSpinnerActivity.class));
+        list.add(new DemoInfo("Retrofit Example", RetrofitActivity.class));
 
     }
 
