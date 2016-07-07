@@ -29,7 +29,8 @@
         <activity android:name=".CircleProgressBarActivity" />
         <activity android:name=".NiceSpinnerActivity" />
         <activity android:name=".DialogplusActivity" />
-        <activity android:name=".BetterSpinnerActivity"></activity>
+        <activity android:name=".BetterSpinnerActivity" />
+        <activity android:name=".retrofit.RetrofitActivity"></activity>
     </application>
 
 </manifest>
