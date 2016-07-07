@@ -1,13 +1,16 @@
 package zpm.codefarmer.sample.retrofit;
 
+import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.EditText;
 import android.widget.TextView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import okhttp3.RequestBody;
 import retrofit2.GsonConverterFactory;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
@@ -23,7 +26,7 @@ public class RetrofitActivity extends AppCompatActivity {
     EditText phoneNum;
     @BindView(R.id.retrofit_phone_info)
     TextView phoneInfo;
-    @OnClick
+    @OnClick(R.id.retrofit_phone_require)
     void phoneNumRequire(){
         Retrofit retrofit=new Retrofit.Builder()
                 .baseUrl("http://apis.juhe.cn/")
@@ -57,8 +60,34 @@ public class RetrofitActivity extends AppCompatActivity {
                     }
                 });
     }
-    @OnClick
+    @OnClick(R.id.retrofit_get_uploadpicture)
     void uploadPicture(){
+        Retrofit retrofit=new Retrofit.Builder()
+                .baseUrl("http://image.ideayapai.com/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+                .build();
+        final Api phone=retrofit.create(Api.class);
+        RequestBody body= RequestBody
+                .create(okhttp3.MediaType.parse("application/json; charset=utf-8")
+                        , Environment.getExternalStorageDirectory().getPath()+"/33.png");
+        phone.getPictureCheck(0,1,body).subscribe(new Subscriber<PictureModel>() {
+            @Override
+            public void onCompleted() {
+
+            }
+
+            @Override
+            public void onError(Throwable e) {
+                Log.e("-----------",e.getMessage());
+            }
+
+            @Override
+            public void onNext(PictureModel pictureModel) {
+                Log.i("-----------",pictureModel.getImageGrayUrl());
+            }
+        });
+
 
     }
     @Override

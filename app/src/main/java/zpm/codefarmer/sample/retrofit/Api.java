@@ -1,7 +1,11 @@
 package zpm.codefarmer.sample.retrofit;
 
+import okhttp3.RequestBody;
 import retrofit2.http.GET;
 import retrofit2.http.Headers;
+import retrofit2.http.Multipart;
+import retrofit2.http.POST;
+import retrofit2.http.Part;
 import retrofit2.http.Query;
 import rx.Observable;
 
@@ -19,4 +23,17 @@ public interface Api {
     @Headers("Content-Type:application/json")
     @GET("mobile/get")
     Observable<PhoneNumInfo> getPhoneNumBerInfo(@Query("phone") String phone, @Query("key") String key);
+
+    /**
+     * http://image.ideayapai.com/upload?defectType=0&perunit=1
+     * @param defectType
+     * @param perunit
+     * @return
+     */
+    @Headers("Content-Type:application/json")
+    @Multipart
+    @POST("upload")
+    Observable<PictureModel> getPictureCheck(@Query("defectType") int defectType,
+                                             @Query("perunit") double perunit, @Part("file") RequestBody file);
+
 }
