@@ -1,6 +1,8 @@
 package zpm.codefarmer.sample.retrofit;
 
+import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
+import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.Headers;
 import retrofit2.http.Multipart;
@@ -30,10 +32,10 @@ public interface Api {
      * @param perunit
      * @return
      */
-    @Headers("Content-Type:application/json")
-    @Multipart
+    @Headers({"Content-Type: multipart/form-data","Accept: application/json"})
     @POST("upload")
+    @Multipart
     Observable<PictureModel> getPictureCheck(@Query("defectType") int defectType,
-                                             @Query("perunit") double perunit, @Part("file") RequestBody file);
+                                             @Query("perunit") double perunit,@Part("file\"; filename=\"image.png\"") RequestBody file);
 
 }

@@ -7,9 +7,13 @@ import android.util.Log;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.io.File;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import okhttp3.MediaType;
+import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
 import retrofit2.GsonConverterFactory;
 import retrofit2.Retrofit;
@@ -68,25 +72,31 @@ public class RetrofitActivity extends AppCompatActivity {
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .build();
         final Api phone=retrofit.create(Api.class);
-        RequestBody body= RequestBody
-                .create(okhttp3.MediaType.parse("application/json; charset=utf-8")
-                        , Environment.getExternalStorageDirectory().getPath()+"/33.png");
-        phone.getPictureCheck(0,1,body).subscribe(new Subscriber<PictureModel>() {
-            @Override
-            public void onCompleted() {
+        // 创建 RequestBody，用于封装 请求RequestBody
+        final RequestBody requestFile =
+                RequestBody.create(MediaType.parse("multipart/form-data"), new File(Environment.getExternalStorageDirectory()+"/33.png"));
 
-            }
 
-            @Override
-            public void onError(Throwable e) {
-                Log.e("-----------",e.getMessage());
-            }
+               phone.getPictureCheck(0,1,requestFile)
+                       .subscribeOn(Schedulers.io())
+                       .observeOn(AndroidSchedulers.mainThread())
+                       .subscribe(new Subscriber<PictureModel>() {
+                           @Override
+                           public void onCompleted() {
 
-            @Override
-            public void onNext(PictureModel pictureModel) {
-                Log.i("-----------",pictureModel.getImageGrayUrl());
-            }
-        });
+                           }
+
+                           @Override
+                           public void onError(Throwable e) {
+                               Log.e("-----------",e.getMessage());
+                           }
+
+                           @Override
+                           public void onNext(PictureModel pictureModel) {
+                               Log.i("-----------",pictureModel.getImageGrayUrl());
+                           }
+                       });
+
 
 
     }
