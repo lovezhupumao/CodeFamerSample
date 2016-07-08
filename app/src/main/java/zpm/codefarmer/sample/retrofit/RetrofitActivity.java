@@ -71,21 +71,16 @@ public class RetrofitActivity extends AppCompatActivity {
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .build();
-        final Api phone=retrofit.create(Api.class);
-        // 创建 RequestBody，用于封装 请求RequestBody
+         Api phone=retrofit.create(Api.class);
         final RequestBody requestFile =
                 RequestBody.create(MediaType.parse("multipart/form-data"), new File(Environment.getExternalStorageDirectory()+"/33.png"));
-
-
-               phone.getPictureCheck(0,1,requestFile)
+               phone.getPictureCheck(0,1,"hello",requestFile)
                        .subscribeOn(Schedulers.io())
                        .observeOn(AndroidSchedulers.mainThread())
                        .subscribe(new Subscriber<PictureModel>() {
                            @Override
                            public void onCompleted() {
-
                            }
-
                            @Override
                            public void onError(Throwable e) {
                                Log.e("-----------",e.getMessage());

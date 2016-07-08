@@ -6,24 +6,24 @@ package zpm.codefarmer.sample.retrofit;
 public class PictureModel {
 
     /**
-     * ImageCheckUrl : http://image.ideayapai.com/ImageResult/16-七月-07ccff1c86-5d24-40fa-8603-0317d423b23b33_resultChecked.jpg
-     * ImageGrayUrl : http://image.ideayapai.com/ImageResult/16-七月-07ccff1c86-5d24-40fa-8603-0317d423b23b33_resultGray.jpg
+     * ImageCheckUrl : http://image.ideayapai.com/ImageResult/16-七月-0840ae4e2b-f1e1-431a-af9e-44abd16dca0c6_resultChecked.jpg
+     * ImageGrayUrl : http://image.ideayapai.com/ImageResult/16-七月-0840ae4e2b-f1e1-431a-af9e-44abd16dca0c6_resultGray.jpg
      * DefectType : 0
-     * PerUnit : 1.0
-     * CrackWidth : 70.2031
-     * Length : 326.5
-     * UsedTime : 0.125
+     * PerUnit : 1
+     * CrackWidth : 370.463
+     * Length : 4778.5
+     * UsedTime : 1.682
      * Area : 0
      */
 
     private String ImageCheckUrl;
     private String ImageGrayUrl;
     private int DefectType;
-    private double PerUnit;
+    private int PerUnit;
     private double CrackWidth;
     private double Length;
     private double UsedTime;
-    private double Area;
+    private int Area;
 
     public String getImageCheckUrl() {
         return ImageCheckUrl;
@@ -49,11 +49,11 @@ public class PictureModel {
         this.DefectType = DefectType;
     }
 
-    public double getPerUnit() {
+    public int getPerUnit() {
         return PerUnit;
     }
 
-    public void setPerUnit(double PerUnit) {
+    public void setPerUnit(int PerUnit) {
         this.PerUnit = PerUnit;
     }
 
@@ -81,11 +81,11 @@ public class PictureModel {
         this.UsedTime = UsedTime;
     }
 
-    public double getArea() {
+    public int getArea() {
         return Area;
     }
 
-    public void setArea(double Area) {
+    public void setArea(int Area) {
         this.Area = Area;
     }
 }
