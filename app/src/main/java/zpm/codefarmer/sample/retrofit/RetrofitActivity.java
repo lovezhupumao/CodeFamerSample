@@ -74,7 +74,6 @@ public class RetrofitActivity extends AppCompatActivity {
          Api phone=retrofit.create(Api.class);
         final RequestBody requestFile =
                 RequestBody.create(MediaType.parse("multipart/form-data"), new File(Environment.getExternalStorageDirectory()+"/33.png"));
-        MultipartBody.Part body =MultipartBody.Part.createFormData("image", "33.png", requestFile);
         phone.getPictureCheck(0,1,requestFile)
                        .subscribeOn(Schedulers.io())
                        .observeOn(AndroidSchedulers.mainThread())
