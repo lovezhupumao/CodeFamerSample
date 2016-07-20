@@ -33,11 +33,10 @@ public interface Api {
      * @return
      */
     @Multipart
-    @Headers({"Content-Type: multipart/form-data","Accept: application/json"})
+
     @POST("upload")
     Observable<PictureModel> getPictureCheck(@Query("defectType") int defectType,
                                              @Query("perunit") double perunit,
-                                             @Part("filename") String description,
-                                             @Part("file; filename=\"image.png\"") RequestBody file);
+                                             @Part("file\"; filename=\"image.png\"") RequestBody file);
 
 }
